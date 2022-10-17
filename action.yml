@@ -1,5 +1,5 @@
 name: Set (multiline) text output
-description: A simple composite actions to set the job output while maintaining the text format e.g. markdown format and multi-line strings.
+description: A composite action to set the job output while maintaining the format e.g. markdown format and multi-line strings.
 author: 'Manuel Rauber <info@boundfoxstudios.com>'
 branding:
   icon: align-left
