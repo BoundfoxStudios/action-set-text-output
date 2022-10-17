@@ -1,6 +1,6 @@
-name: Set text output
+name: Set (multiline) text output
 description: A simple composite actions to set the job output while maintaining the text format e.g. markdown format and multi-line strings.
-author: 'Marko Kungla <marko.kungla@gmail.com>'
+author: 'Manuel Rauber <info@boundfoxstudios.com>'
 branding:
   icon: align-left
   color: orange
@@ -26,4 +26,4 @@ runs:
         text="${text//'%'/'%25'}"
         text="${text//$'\n'/'%0A'}"
         text="${text//$'\r'/'%0D'}"
-        echo "::set-output name=value::$text"
+        echo "value=$text" >> $GITHUB_OUTPUT

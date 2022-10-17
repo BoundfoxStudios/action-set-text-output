@@ -2,14 +2,12 @@
 
 A simple composite actions to set the job output while maintaining the text format e.g. markdown format and multi-line strings.
 
-[![test](https://github.com/mkungla/actions-set-text-output/actions/workflows/test.yml/badge.svg)](https://github.com/mkungla/actions-set-text-output/actions/workflows/test.yml)
+[![test](https://github.com/BoundfoxStudios/action-set-text-output/actions/workflows/test.yml/badge.svg)](https://github.com/BoundfoxStudios/action-set-text-output/actions/workflows/test.yml)
 
 # Usage
 
-**NOTE:** `mkungla/actions-set-text-output@v1` is branch which always has latest `v1.x.x` version.  
-
 ```yml
-- uses: mkungla/actions-set-text-output@v1
+- uses: BoundfoxStudios/action-set-text-output@v1
   id: content
   with:
     text: |
@@ -26,7 +24,7 @@ A simple composite actions to set the job output while maintaining the text form
     outputs:
       content: ${{ steps.content.outputs.value }}
     steps:
-      - uses: mkungla/actions-set-text-output@v1
+    - uses: BoundfoxStudios/action-set-text-output@v1
         id: content
         with:
           text: |

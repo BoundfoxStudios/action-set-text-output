@@ -28,7 +28,7 @@ jobs:
           text="${text//'%'/'%25'}"
           text="${text//$'\n'/'%0A'}"
           text="${text//$'\r'/'%0D'}"
-          echo "::set-output name=value::$text"
+          echo "value=$text" >> $GITHUB_OUTPUT
 
       - name: test simple
         uses: ./
@@ -56,7 +56,7 @@ jobs:
       - run: echo "${{ steps.get-changekog.outputs.value }}"
 
       - id: plain
-        run: echo "::set-output name=value::$(cat tests/test-changelog.md)"
+        run: echo "value=$(cat tests/test-changelog.md)" >> $GITHUB_OUTPUT
       - if: ${{ steps.get-changekog.outputs.value == steps.plain.outputs.value }}
         run: exit 1
 
@@ -80,7 +80,7 @@ jobs:
     outputs:
       content: ${{ steps.content.outputs.value }}
     steps:
-      - uses: mkungla/actions-set-text-output@v1
+      - uses: BoundfoxStudios/action-set-text-output@v1
         id: content
         with:
           text: |
@@ -105,7 +105,7 @@ jobs:
     outputs:
       content: ${{ steps.content.outputs.value }}
     steps:
-      - uses: mkungla/actions-set-text-output@main
+      - uses: BoundfoxStudios/action-set-text-output@main
         id: content
         with:
           text: |
@@ -132,7 +132,7 @@ jobs:
     outputs:
       content: ${{ steps.content.outputs.value }}
     steps:
-      - uses: mkungla/actions-set-text-output@v1
+      - uses: BoundfoxStudios/action-set-text-output@v1
         id: content
         with:
           text: |
