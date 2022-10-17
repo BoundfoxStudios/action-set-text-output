@@ -1,6 +1,6 @@
 # Set text output v1
 
-A simple composite actions to set the job output while maintaining the text format e.g. markdown format and multi-line strings.
+A simple composite action to set the job output while maintaining the text format e.g. markdown format and multi-line strings.
 
 [![test](https://github.com/BoundfoxStudios/action-set-text-output/actions/workflows/test.yml/badge.svg)](https://github.com/BoundfoxStudios/action-set-text-output/actions/workflows/test.yml)
 
