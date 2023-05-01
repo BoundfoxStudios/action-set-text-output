@@ -1,3 +1,7 @@
+# ARCHIVED
+
+Use https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings instead.
+
 # Set text output v1
 
 A simple composite action to set the job output while maintaining the text format e.g. markdown format and multi-line strings.
